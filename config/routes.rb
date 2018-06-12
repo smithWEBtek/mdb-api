@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :list_songs
+  resources :song_genres
+  resources :song_artists
   resources :lists
   resources :docs
   resources :mp3s

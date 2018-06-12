@@ -1,7 +1,59 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Song.create(name: 'Blue Skies')
+Song.create(name: 'Wichita Lineman')
+Song.create(name: 'Happy')
+Song.create(name: 'Somewhere Over The Rainbow')
+Song.create(name: 'Llororas')
+
+Artist.create(name: 'Willie Nelson')
+Artist.create(name: 'Glenn Campbell')
+Artist.create(name: 'Pharell Williams')
+Artist.create(name: 'Judy Garland')
+Artist.create(name: 'Oscar De Leon')
+
+Genre.create(name: 'Swing')
+Genre.create(name: 'Country')
+Genre.create(name: 'Pop')
+Genre.create(name: 'Ballad')
+Genre.create(name: 'Salsa')
+
+SongArtist.create(song_id: 1, artist_id: 1)
+SongArtist.create(song_id: 2, artist_id: 2)
+SongArtist.create(song_id: 3, artist_id: 3)
+SongArtist.create(song_id: 4, artist_id: 4)
+SongArtist.create(song_id: 5, artist_id: 5)
+
+SongGenre.create(song_id: 1, genre_id: 1)
+SongGenre.create(song_id: 2, genre_id: 2)
+SongGenre.create(song_id: 3, genre_id: 3)
+SongGenre.create(song_id: 4, genre_id: 4)
+SongGenre.create(song_id: 5, genre_id: 5)
+
+Doc.create(song_id: 1, name: 'Blue Skies', format: 'pdf', description: 'seed doc', url: '#')
+Doc.create(song_id: 2, name: 'Wichita Lineman', format: 'pdf', description: 'seed doc', url: '#')
+Doc.create(song_id: 3, name: 'Happy', format: 'pdf', description: 'seed doc', url: '#')
+Doc.create(song_id: 4, name: 'Somewhere Over The Rainbow', format: 'pdf', description: 'seed doc', url: '#')
+Doc.create(song_id: 5, name: 'Llororas', format: 'pdf', description: 'seed doc', url: '#')
+
+Mp3.create(name: 'Blue Skies', url: '#', description: 'seed mp3')
+Mp3.create(name: 'Wichita Lineman', url: '#', description: 'seed mp3')
+Mp3.create(name: 'Happy', url: '#', description: 'seed mp3')
+Mp3.create(name: 'Somewhere Over The Rainbow', url: '#', description: 'seed mp3')
+Mp3.create(name: 'Llororas', url: '#', description: 'seed mp3')
+ 
+List.create(name: 'LaFabrica1', date: '06-03-2018', description: 'seed list')
+List.create(name: 'Classical1', date: '06-03-2018', description: 'seed list')
+List.create(name: 'Standards1', date: '06-03-2018', description: 'seed list')
+List.create(name: 'Latin1', date: '06-03-2018', description: 'seed list')
+List.create(name: 'Broadway1', date: '06-03-2018', description: 'seed list')
+
+ListSong.create(song_id: 1, list_id: 1)
+ListSong.create(song_id: 2, list_id: 1)
+ListSong.create(song_id: 3, list_id: 1)
+
+ListSong.create(song_id: 3, list_id: 2)
+ListSong.create(song_id: 4, list_id: 2)
+ListSong.create(song_id: 5, list_id: 2)
+
+ListSong.create(song_id: 2, list_id: 3)
+ListSong.create(song_id: 3, list_id: 3)
+ListSong.create(song_id: 4, list_id: 3)
