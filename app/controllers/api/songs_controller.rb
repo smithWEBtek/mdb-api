@@ -32,16 +32,7 @@ class Api::SongsController < ApplicationController
 		@song.delete
 		render json: { message: 'song deleted' }
 	end
-	
-	def resources
-		@resources = @song.resources
-		if @resources
-			render json: @resources
-		else
-			render json: { errors: { message: 'song resources NOT found' }}
-		end
-	end
-
+ 
 	private
 	def set_song
 		@song = Song.find_by_id(params[:id])

@@ -32,15 +32,6 @@ class Api::ArtistsController < ApplicationController
 		@artist.delete
 		render json: { message: 'artist deleted' }
 	end
-	
-	def resources
-		@resources = @artist.resources
-		if @resources
-			render json: @resources
-		else
-			render json: { errors: { message: 'artist resources NOT found' }}
-		end
-	end
 
 	private
 	def set_artist

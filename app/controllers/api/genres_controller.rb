@@ -32,16 +32,7 @@ class Api::GenresController < ApplicationController
 		@genre.delete
 		render json: { message: 'genre deleted' }
 	end
-	
-	def resources
-		@resources = @genre.resources
-		if @resources
-			render json: @resources
-		else
-			render json: { errors: { message: 'genre resources NOT found' }}
-		end
-	end
-
+	 
 	private
 	def set_genre
 		@genre = Genre.find_by_id(params[:id])

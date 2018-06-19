@@ -32,16 +32,7 @@ class Api::Mp3sController < ApplicationController
 		@mp3.delete
 		render json: { message: 'mp3 deleted' }
 	end
-	
-	def resources
-		@resources = @mp3.resources
-		if @resources
-			render json: @resources
-		else
-			render json: { errors: { message: 'mp3 resources NOT found' }}
-		end
-	end
-
+ 
 	private
 	def set_mp3
 		@mp3 = Mp3.find_by_id(params[:id])

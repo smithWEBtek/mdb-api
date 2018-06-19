@@ -32,16 +32,7 @@ class Api::DocsController < ApplicationController
 		@doc.delete
 		render json: { message: 'doc deleted' }
 	end
-	
-	def resources
-		@resources = @doc.resources
-		if @resources
-			render json: @resources
-		else
-			render json: { errors: { message: 'doc resources NOT found' }}
-		end
-	end
-
+ 
 	private
 	def set_doc
 		@doc = Doc.find_by_id(params[:id])

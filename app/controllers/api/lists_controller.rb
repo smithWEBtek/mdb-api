@@ -33,15 +33,6 @@ class Api::ListsController < ApplicationController
 		render json: { message: 'list deleted' }
 	end
 	
-	def resources
-		@resources = @list.resources
-		if @resources
-			render json: @resources
-		else
-			render json: { errors: { message: 'list resources NOT found' }}
-		end
-	end
-
 	private
 	def set_list
 		@list = List.find_by_id(params[:id])
