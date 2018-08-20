@@ -15,21 +15,11 @@ ActiveRecord::Schema.define(version: 2018_06_12_165747) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "artists", force: :cascade do |t|
-    t.string "name"
-  end
-
   create_table "docs", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
     t.integer "song_id"
     t.string "format"
-    t.string "url"
-  end
-
-  create_table "genres", force: :cascade do |t|
-    t.string "name"
     t.string "description"
+    t.string "url"
   end
 
   create_table "list_songs", force: :cascade do |t|
@@ -41,23 +31,6 @@ ActiveRecord::Schema.define(version: 2018_06_12_165747) do
     t.string "name"
     t.string "description"
     t.string "date"
-  end
-
-  create_table "mp3s", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.integer "song_id"
-    t.string "url"
-  end
-
-  create_table "song_artists", force: :cascade do |t|
-    t.integer "song_id"
-    t.integer "artist_id"
-  end
-
-  create_table "song_genres", force: :cascade do |t|
-    t.integer "song_id"
-    t.integer "genre_id"
   end
 
   create_table "songs", force: :cascade do |t|

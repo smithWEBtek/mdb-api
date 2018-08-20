@@ -1,5 +1,5 @@
 class Api::DocsController < ApplicationController
-	before_action :set_doc, only: [:show, :update, :destroy, :resources]
+	before_action :set_doc, only: [:show, :update, :destroy]
 	
 	def index
 		@docs = Doc.all
@@ -38,7 +38,7 @@ class Api::DocsController < ApplicationController
 		@doc = Doc.find_by_id(params[:id])
 		end
 	def doc_params
-		params.require(:doc).permit(:name, :description, :song_id, :format, :url)
+		params.require(:doc).permit(:song_id, :format, :description, :url)
 	end
 
 end
