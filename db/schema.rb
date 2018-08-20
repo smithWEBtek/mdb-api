@@ -20,10 +20,9 @@ ActiveRecord::Schema.define(version: 2018_06_12_165747) do
   end
 
   create_table "docs", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
     t.integer "song_id"
     t.string "format"
+    t.string "description"
     t.string "url"
   end
 
