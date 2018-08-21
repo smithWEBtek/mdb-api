@@ -35,6 +35,7 @@ gem 'seed_dump'
 gem 'rack-cors'
 gem 'rails-erd'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'responders'
 
 group :development, :test do
   gem 'foreman', '~> 0.82.0'

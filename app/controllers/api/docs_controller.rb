@@ -38,7 +38,7 @@ class Api::DocsController < ApplicationController
 		@doc = Doc.find_by_id(params[:id])
 		end
 	def doc_params
-		params.require(:doc).permit(:song_id, :format, :description, :url)
+		params.require(:doc).permit(:doc_id, :format, :description, :url)
 	end
 
 end
